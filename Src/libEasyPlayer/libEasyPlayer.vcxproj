@@ -21,12 +21,14 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -64,16 +66,16 @@
       <AdditionalDependencies>avcodec.lib;avfilter.lib;avformat.lib;avutil.lib;swresample.lib;swscale.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy EasyMP4Writer\lib\libgpac.dll ..\..\bin\lib
-copy EasyRTSPClient\libEasyRTSPClient.dll ..\..\bin\lib
-copy IntelHardCodec\IntelHardCodec.dll ..\..\bin\lib
-copy libEasyAACEncoder\libEasyAACEncoder.dll ..\..\bin\lib
-copy bin\libEasyPlayer-RTSP.dll ..\..\bin\lib
-copy EasyMP4Writer\lib\libgpac.dll ..\bin\lib
-copy EasyRTSPClient\libEasyRTSPClient.dll ..\bin\lib
-copy IntelHardCodec\IntelHardCodec.dll ..\bin\lib
-copy libEasyAACEncoder\libEasyAACEncoder.dll ..\bin\lib
-copy bin\libEasyPlayer-RTSP.dll ..\bin\lib</Command>
+      <Command>xcopy EasyMP4Writer\lib\libgpac.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy EasyRTSPClient\libEasyRTSPClient.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy IntelHardCodec\IntelHardCodec.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy libEasyAACEncoder\libEasyAACEncoder.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy bin\libEasyPlayer-RTSP.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy EasyMP4Writer\lib\libgpac.dll ..\Bin\Lib\ /S /I /y
+xcopy EasyRTSPClient\libEasyRTSPClient.dll ..\Bin\Lib\ /S /I /y
+xcopy IntelHardCodec\IntelHardCodec.dll ..\Bin\Lib\ /S /I /y
+xcopy libEasyAACEncoder\libEasyAACEncoder.dll ..\Bin\Lib\ /S /I /y
+xcopy bin\libEasyPlayer-RTSP.dll ..\Bin\Lib\ /S /I /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -98,16 +100,16 @@ copy bin\libEasyPlayer-RTSP.dll ..\bin\lib</Command>
       <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
-      <Command>copy EasyMP4Writer\lib\libgpac.dll ..\..\bin\lib
-copy EasyRTSPClient\libEasyRTSPClient.dll ..\..\bin\lib
-copy IntelHardCodec\IntelHardCodec.dll ..\..\bin\lib
-copy libEasyAACEncoder\libEasyAACEncoder.dll ..\..\bin\lib
-copy bin\libEasyPlayer-RTSP.dll ..\..\bin\lib
-copy EasyMP4Writer\lib\libgpac.dll ..\bin\lib
-copy EasyRTSPClient\libEasyRTSPClient.dll ..\bin\lib
-copy IntelHardCodec\IntelHardCodec.dll ..\bin\lib
-copy libEasyAACEncoder\libEasyAACEncoder.dll ..\bin\lib
-copy bin\libEasyPlayer-RTSP.dll ..\bin\lib</Command>
+      <Command>xcopy EasyMP4Writer\lib\libgpac.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy EasyRTSPClient\libEasyRTSPClient.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy IntelHardCodec\IntelHardCodec.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy libEasyAACEncoder\libEasyAACEncoder.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy bin\libEasyPlayer-RTSP.dll $(SolutionDir)..\Bin\Lib\ /S /I /y
+xcopy EasyMP4Writer\lib\libgpac.dll ..\Bin\Lib\ /S /I /y
+xcopy EasyRTSPClient\libEasyRTSPClient.dll ..\Bin\Lib\ /S /I /y
+xcopy IntelHardCodec\IntelHardCodec.dll ..\Bin\Lib\ /S /I /y
+xcopy libEasyAACEncoder\libEasyAACEncoder.dll ..\Bin\Lib\ /S /I /y
+xcopy bin\libEasyPlayer-RTSP.dll ..\Bin\Lib\ /S /I /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
